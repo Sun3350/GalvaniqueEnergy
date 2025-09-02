@@ -117,9 +117,9 @@ export default function Careers() {
                 Why Work With Us
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
-                At Galvanique, we're not just employees - we're a team of
+                {`At Galvanique, we're not just employees - we're a team of
                 passionate energy experts dedicated to making a difference in
-                our community and the environment.
+                our community and the environment.`}
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
                 We believe in investing in our people, providing opportunities

@@ -175,8 +175,8 @@ export default function Contact() {
                     Thank You!
                   </h3>
                   <p className="text-muted-foreground">
-                    Your message has been sent successfully. We'll get back to
-                    you soon.
+                    {`Your message has been sent successfully. We'll get back to
+                    you soon.`}
                   </p>
                 </motion.div>
               ) : (

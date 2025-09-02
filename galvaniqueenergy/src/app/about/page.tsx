@@ -92,8 +92,8 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}>
-            For over a decade, we've been powering homes and businesses with
-            reliable, sustainable electrical and solar solutions.
+            {`For over a decade, we've been powering homes and businesses with
+            reliable, sustainable electrical and solar solutions.`}
           </motion.p>
         </div>
       </section>
@@ -119,10 +119,10 @@ export default function About() {
                 service providers in the region.
               </p>
               <p className="text-lg text-muted-foreground mb-4">
-                Today, we're proud to have served over 5,000 satisfied customers
+                {`Today, we're proud to have served over 5,000 satisfied customers
                 and completed numerous large-scale projects. Our team of
                 certified professionals continues to grow, bringing innovative
-                solutions and exceptional service to every client.
+                solutions and exceptional service to every client.`}
               </p>
               <div className="grid grid-cols-3 gap-4 mt-8">
                 <div className="text-center">

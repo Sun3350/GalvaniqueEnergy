@@ -2,13 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  FileText,
-  Clipboard,
-  AlertCircle,
-  Scale,
-  BookOpen,
-} from "lucide-react";
+import { Clipboard, AlertCircle, Scale, BookOpen } from "lucide-react";
 
 const termsSections = [
   {
@@ -75,9 +69,9 @@ export default function Terms() {
             transition={{ duration: 0.6 }}
             className="prose prose-lg dark:prose-invert max-w-none">
             <p className="lead">
-              Please read these Terms of Service carefully before using our
+              {`Please read these Terms of Service carefully before using our
               website and services. These terms govern your access to and use of
-              Galvanique's services.
+              Galvanique's services.`}
             </p>
 
             {termsSections.map((section, index) => {
