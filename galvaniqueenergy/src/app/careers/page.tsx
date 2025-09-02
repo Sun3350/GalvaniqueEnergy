@@ -247,8 +247,8 @@ export default function Careers() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Don't see a position that matches your skills? Send us your resume
-              anyway!
+              {`Don't see a position that matches your skills? Send us your resume
+              anyway!`}
             </p>
             <Button className="bg-[var(--primary)] hover:bg-blue-800">
               Submit General Application
