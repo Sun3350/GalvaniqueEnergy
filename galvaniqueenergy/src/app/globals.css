@@ -1,0 +1,196 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #ffffff; /* White */
+  --foreground: #000000; /* Black */
+  --card: #ffffff; /* White */
+  --card-foreground: #000000; /* Black */
+  --popover: #ffffff; /* White */
+  --popover-foreground: #000000; /* Black */
+  --primary: #51aeac; /* Green - Primary */
+  --primary-foreground: #ffffff; /* White */
+  --secondary: #101828; /* Deep Blue - Secondary */
+  --secondary-foreground: #ffffff; /* White */
+  --muted: #f5f5f5; /* Light gray */
+  --muted-foreground: #737373; /* Gray */
+  --accent: #f39352; /* Yellow - Accent */
+  --accent-foreground: #000000; /* Black */
+  --destructive: #ef4444; /* Red */
+  --border: #e5e5e5; /* Light gray */
+  --input: #e5e5e5; /* Light gray */
+  --ring: #51aeac; /* Green */
+  --chart-1: #51aeac; /* Green */
+  --chart-2: #124170; /* Deep Blue */
+  --chart-3: #f39352; /* Yellow */
+  --chart-4: #3b82f6; /* Blue */
+  --chart-5: #8b5cf6; /* Purple */
+  --sidebar: #ffffff; /* White */
+  --sidebar-foreground: #000000; /* Black */
+  --sidebar-primary: #51aeac; /* Green */
+  --sidebar-primary-foreground: #ffffff; /* White */
+  --sidebar-accent: #f39352; /* Yellow */
+  --sidebar-accent-foreground: #000000; /* Black */
+  --sidebar-border: #e5e5e5; /* Light gray */
+  --sidebar-ring: #51aeac; /* Green */
+
+  --galvanique-primary: #51aeac; /* Green */
+  --galvanique-secondary: #101828; /* Deep Blue */
+  --galvanique-accent: #f39352; /* Yellow */
+  --galvanique-neutral: #ffffff; /* White */
+}
+
+.dark {
+  --background: #000000; /* Black */
+  --foreground: #ffffff; /* White */
+  --card: #0a0a0a; /* Dark gray */
+  --card-foreground: #ffffff; /* White */
+  --popover: #0a0a0a; /* Dark gray */
+  --popover-foreground: #ffffff; /* White */
+  --primary: #51aeac; /* Green */
+  --primary-foreground: #ffffff; /* White */
+  --secondary: #101828; /* Deep Blue */
+  --secondary-foreground: #ffffff; /* White */
+  --muted: #101828; /* Dark gray */
+  --muted-foreground: #a3a3a3; /* Light gray */
+  --accent: #f39352; /* Yellow */
+  --accent-foreground: #000000; /* Black */
+  --destructive: #7f1d1d; /* Dark red */
+  --border: #262626; /* Dark gray */
+  --input: #262626; /* Dark gray */
+  --ring: #51aeac; /* Green */
+  --chart-1: #51aeac; /* Green */
+  --chart-2: #101828; /* Deep Blue */
+  --chart-3: #f39352; /* Yellow */
+  --chart-4: #3b82f6; /* Blue */
+  --chart-5: #8b5cf6; /* Purple */
+  --sidebar: #0a0a0a; /* Dark gray */
+  --sidebar-foreground: #ffffff; /* White */
+  --sidebar-primary: #51aeac; /* Green */
+  --sidebar-primary-foreground: #ffffff; /* White */
+  --sidebar-accent: #f39352; /* Yellow */
+  --sidebar-accent-foreground: #000000; /* Black */
+  --sidebar-border: #262626; /* Dark gray */
+  --sidebar-ring: #51aeac; /* Green */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes for Galvanique brand colors */
+  .bg-galvanique-primary {
+    background-color: var(--galvanique-primary);
+  }
+
+  .bg-galvanique-secondary {
+    background-color: var(--galvanique-secondary);
+  }
+
+  .bg-galvanique-accent {
+    background-color: var(--galvanique-accent);
+  }
+
+  .text-galvanique-primary {
+    color: var(--galvanique-primary);
+  }
+
+  .text-galvanique-secondary {
+    color: var(--galvanique-secondary);
+  }
+
+  .text-galvanique-accent {
+    color: var(--galvanique-accent);
+  }
+
+  .border-galvanique-primary {
+    border-color: var(--galvanique-primary);
+  }
+
+  .border-galvanique-secondary {
+    border-color: var(--galvanique-secondary);
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-galvanique {
+    background: linear-gradient(
+      135deg,
+      var(--galvanique-primary) 0%,
+      var(--galvanique-secondary) 100%
+    );
+  }
+
+  .bg-gradient-galvanique-reverse {
+    background: linear-gradient(
+      135deg,
+      var(--galvanique-secondary) 0%,
+      var(--galvanique-primary) 100%
+    );
+  }
+
+  /* Animation utilities */
+  .animate-in {
+    animation: animateIn 0.5s ease-out;
+  }
+
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
